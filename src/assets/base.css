@@ -1,0 +1,20 @@
+:root {
+  --blue: #4A5558;
+  --gray:#828888;
+  --orange: #FF5300;
+  --white: #FFFFFF;
+}
+
+html{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  & a {
+    text-decoration: none;
+  }
+
+  & li {
+  list-style: none;
+  }
+}
