@@ -18,10 +18,8 @@ import TaskItemComponent from './components/TaskItemComponent.vue'
 <style>
 body {
   background: var(--background);
-
   background-image: url(./assets/bg-image.png);
   background-size: cover;
   background-position: center;
-  width: 100%;
 }
 </style>
