@@ -6,6 +6,8 @@
   <div class="taskList">
     <TaskItemComponent />
   </div>
+
+  <div class="line" />
 </template>
 
 <script setup>
@@ -21,5 +23,15 @@ body {
   background-image: url(./assets/bg-image.png);
   background-size: cover;
   background-position: center;
+
+  .line {
+    width: 1px;
+    height: 100vh;
+    background: var(--gray);
+    position: fixed;
+    left: 50%;
+    top: 0;
+    margin: auto;
+  }
 }
 </style>

@@ -12,7 +12,7 @@
 <style>
 .headerWrapper {
   padding: 10px 0 10px 0;
-  width: 100%;
+  width: 50%;
   border-bottom: 1px solid var(--gray);
 }
 
