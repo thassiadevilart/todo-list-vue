@@ -1,5 +1,6 @@
 <template>
   <HeaderComponent />
+  
   <DateComponent />
   <TaskCreateComponent @taskCreated="addTaskToList" />
 

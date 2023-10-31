@@ -3,6 +3,7 @@
     <div class="task-create-input-wrapper">
       <font-awesome-icon class="task-create-icon" :icon="['fas', 'pencil']" />
       <input
+        @keyup.enter="addTask()"
         class="task-create-input"
         type="text"
         maxlength="28"
