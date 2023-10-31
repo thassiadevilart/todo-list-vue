@@ -1,7 +1,7 @@
 <template>
   <HeaderComponent />
   <DateComponent />
-  <TaskCreateComponent />
+  <TaskCreateComponent @taskCreated="addTaskToList" />
 
   <div class="taskList">
     <TaskItemComponent />
@@ -15,6 +15,13 @@ import HeaderComponent from './components/HeaderComponent.vue'
 import DateComponent from './components/DateComponent.vue'
 import TaskCreateComponent from './components/TaskCreateComponent.vue'
 import TaskItemComponent from './components/TaskItemComponent.vue'
+
+function addTaskToList(taskName){
+  todoList.push(taskName)
+  console.log(todoList)//todo: remove
+}
+const todoList = []
+
 </script>
 
 <style>
