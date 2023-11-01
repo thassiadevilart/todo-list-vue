@@ -61,6 +61,7 @@ function disableButton() {
   color: var(--gray);
   padding: 5px;
   font-weight: 100;
+  width: 380px;
 }
 
 .task-create-input::placeholder {
