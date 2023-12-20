@@ -5,8 +5,9 @@
     <DateComponent />
     <div class="list-content-wrapper">
       <TaskCreateComponent @taskCreated="addTaskToList" />
-      <div class="taskList">
+      <div class="task-list">
         <TaskItemComponent />
+
       </div>
     </div>
   </div>
@@ -33,6 +34,7 @@ body {
   background-image: url(./assets/bg-image.png);
   background-size: cover;
   background-position: center;
+  overflow-y: hidden;
 
   .line {
     width: 1px;
@@ -58,7 +60,21 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  margin: auto;
   height: 100%;
+  width: 50%;
+}
+
+.task-list {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.task-list::-webkit-scrollbar {
+  display: none;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  display: none;
 }
 </style>
