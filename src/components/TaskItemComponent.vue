@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+import Task from '../data/task'
+
+defineProps({ task: Task })
 
 const taskDone = ref(false)
 const expandTaskDescription = ref(false)
@@ -21,7 +24,7 @@ function toggle() {
       <input class="input-checkbox" v-model="taskDone" type="checkbox" id="checkbox" />
       <label class="input-checkbox-label" for="checkbox"> </label>
 
-      <h1 class="task-name">Task</h1>
+      <h1 class="task-name">{{ task.title }}</h1>
       <font-awesome-icon
         :icon="['fas', 'chevron-down']"
         @click="toggle()"

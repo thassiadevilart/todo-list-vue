@@ -7,7 +7,7 @@
       <TaskCreateComponent @taskCreated="addTaskToList" />
       <ol class="task-list">
         <li v-for="task in todoList" :key="task.title">
-          <TaskItemComponent />
+          <TaskItemComponent :task="task" />
         </li>
       </ol>
     </div>
@@ -23,13 +23,7 @@ import TaskCreateComponent from './components/TaskCreateComponent.vue'
 import TaskItemComponent from './components/TaskItemComponent.vue'
 
 import { ref } from 'vue'
-class Task {
-  constructor(title, description) {
-    this.title = title
-    this.description = description
-    this.isDone = false
-  }
-}
+import Task from './data/task'
 
 function addTaskToList(taskName) {
   let newTask = new Task(taskName, '')
