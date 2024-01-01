@@ -5,10 +5,11 @@
     <DateComponent />
     <div class="list-content-wrapper">
       <TaskCreateComponent @taskCreated="addTaskToList" />
-      <div class="task-list">
-        <TaskItemComponent />
-
-      </div>
+      <ol class="task-list">
+        <li v-for="task in todoList" :key="task.title">
+          <TaskItemComponent />
+        </li>
+      </ol>
     </div>
   </div>
 
@@ -21,11 +22,21 @@ import DateComponent from './components/DateComponent.vue'
 import TaskCreateComponent from './components/TaskCreateComponent.vue'
 import TaskItemComponent from './components/TaskItemComponent.vue'
 
-function addTaskToList(taskName) {
-  todoList.push(taskName)
-  console.log(todoList) //todo: remove
+import { ref } from 'vue'
+class Task {
+  constructor(title, description) {
+    this.title = title
+    this.description = description
+    this.isDone = false
+  }
 }
-const todoList = []
+
+function addTaskToList(taskName) {
+  let newTask = new Task(taskName, '')
+
+  todoList.value.push(newTask)
+}
+const todoList = ref([])
 </script>
 
 <style>
@@ -50,6 +61,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   width: 100%;
   height: 100%;
