@@ -98,9 +98,15 @@ const dayAbbreviation = computed(() => {
 
   display: none; /* Todo: Make arrow navigation */
 }
-
 .navigation > * {
   cursor: pointer;
   padding: 20px;
+}
+
+@media only screen and (max-width: 1180px) {
+  .dateWrapper{
+    height: 250px;
+    margin-top: 50px;
+  }
 }
 </style>

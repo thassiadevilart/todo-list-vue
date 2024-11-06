@@ -36,7 +36,6 @@ const todoList = ref([])
 <style>
 body {
   background: var(--background);
-  background-image: url(./assets/bg-image.png);
   background-size: cover;
   background-position: center;
   overflow-y: hidden;
@@ -74,6 +73,7 @@ body {
 .task-list {
   overflow-y: scroll;
   height: 400px;
+  padding: 0;
 }
 
 .task-list::-webkit-scrollbar {
@@ -82,5 +82,22 @@ body {
 
 .task-list::-webkit-scrollbar-thumb {
   display: none;
+}
+
+@media only screen and (max-width: 1180px) {
+  .main-content-wrapper{
+    flex-direction: column;
+    height: 100vh;
+
+  }
+  .list-content-wrapper{
+    height: 0;
+  }
+  .line {
+    display: none;
+  }
+  .list-content-wrapper {
+    height: 50%;
+  }
 }
 </style>

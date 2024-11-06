@@ -84,4 +84,9 @@ function disableButton() {
   cursor: pointer;
   font-size: 1rem;
 }
+@media only screen and (max-width: 1180px) {
+  .task-create-input-wrapper{
+    width: 80%;
+ }
+}
 </style>

@@ -71,4 +71,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
   cursor: pointer;
   opacity: 70%;
 }
+@media only screen and (max-width: 1180px) {
+  .headerWrapper {
+    width: 100%;
+ }
+}
 </style>
